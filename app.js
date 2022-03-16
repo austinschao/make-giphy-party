@@ -41,7 +41,7 @@ function removeGif(e) {
 async function getSearchVal(e) {
   e.preventDefault();
   let searchTerm = $('#search-term').val();
-  $searchInput.val("");
+  $('#search-term').val("");
 
   let response = await axios.get('http://api.giphy.com/v1/gifs/search', { params: { q: searchTerm, api_key: 'q7MxlJQCOVBgdiLRTBj9yGQcO5v4O8pD' } });
   console.log(response, 'response');
